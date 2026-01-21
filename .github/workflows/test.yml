@@ -1,0 +1,39 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Set up MSVC
+        uses: microsoft/setup-msbuild@v2
+      
+      - name: Build dbgcapture.exe
+        shell: cmd
+        run: |
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+          cd dbgcapture
+          nmake
+      
+      - name: Install dependencies
+        run: |
+          cd mcp_server
+          pip install -e ".[dev]"
+      
+      - name: Run tests
+        run: |
+          cd mcp_server
+          pytest tests/ -v

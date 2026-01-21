@@ -117,8 +117,13 @@ class CaptureManager:
         # Look relative to this module
         module_dir = Path(__file__).parent
         candidates = [
-            module_dir.parent.parent / "dbgcapture" / "dbgcapture.exe",
+            # Embedded in package (pip install)
             module_dir / "dbgcapture.exe",
+            # Development: sibling directory
+            module_dir.parent.parent / "dbgcapture" / "dbgcapture.exe",
+            # Development: repo root
+            module_dir.parent.parent.parent / "dbgcapture" / "dbgcapture.exe",
+            # Current directory
             Path("dbgcapture.exe"),
         ]
         
