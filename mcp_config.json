@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "dbgcapture": {
+      "command": "C:/Sysint/DbgView/.venv/Scripts/python.exe",
+      "args": ["-m", "dbgcapture_mcp"],
+      "cwd": "C:/Sysint/DbgView/MCP/mcp_server"
+    }
+  }
+}
