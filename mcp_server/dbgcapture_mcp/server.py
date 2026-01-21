@@ -4,6 +4,7 @@ MCP Server for Debug Capture
 Exposes debug capture functionality via MCP tools.
 """
 
+import argparse
 import asyncio
 import json
 import re
@@ -325,6 +326,17 @@ async def run_server():
 
 def main():
     """Main entry point."""
+    parser = argparse.ArgumentParser(
+        prog="dbgcapture-mcp",
+        description="MCP server for capturing Windows debug output (OutputDebugString)"
+    )
+    parser.add_argument(
+        "--version",
+        action="version",
+        version="%(prog)s 0.1.0"
+    )
+    parser.parse_args()
+    
     asyncio.run(run_server())
 
 

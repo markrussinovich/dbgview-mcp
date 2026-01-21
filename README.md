@@ -18,7 +18,7 @@ An MCP (Model Context Protocol) server that enables AI to capture and filter Win
 ### Build the capture executable
 
 ```cmd
-cd MCP\dbgcapture
+cd dbgcapture
 nmake
 ```
 
@@ -30,7 +30,7 @@ cl /O2 dbgcapture.c /Fe:dbgcapture.exe advapi32.lib
 ### Install Python dependencies
 
 ```cmd
-cd MCP\mcp_server
+cd mcp_server
 pip install -e .
 ```
 
@@ -66,4 +66,6 @@ MCP Client → MCP Server (Python) → Capture Manager → dbgcapture.exe
 
 ## License
 
-Based on DebugView by Mark Russinovich / Sysinternals.
+MIT License - see [LICENSE](LICENSE) for details.
+
+Inspired by DebugView by Mark Russinovich / Sysinternals.
