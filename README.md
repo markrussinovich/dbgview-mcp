@@ -2,7 +2,7 @@
 
 An MCP (Model Context Protocol) server that enables AI to capture and filter Windows debug output (`OutputDebugString`).
 
-[![PyPI version](https://badge.fury.io/py/dbgcapture-mcp.svg)](https://pypi.org/project/dbgcapture-mcp/)
+[![PyPI version](https://badge.fury.io/py/dbgview-mcp.svg)](https://pypi.org/project/dbgview-mcp/)
 [![Test](https://github.com/markrussinovich/dbgview-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/markrussinovich/dbgview-mcp/actions/workflows/test.yml)
 
 ## Installation
@@ -10,7 +10,7 @@ An MCP (Model Context Protocol) server that enables AI to capture and filter Win
 ### From PyPI (recommended)
 
 ```cmd
-pip install dbgcapture-mcp
+pip install dbgview-mcp
 ```
 
 The package includes the pre-built `dbgcapture.exe` binary.

@@ -58,7 +58,7 @@ jobs:
     
     environment:
       name: pypi
-      url: https://pypi.org/project/dbgcapture-mcp/
+      url: https://pypi.org/project/dbgview-mcp/
     
     steps:
       - name: Download dist artifacts

@@ -328,7 +328,7 @@ async def run_server():
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
-        prog="dbgcapture-mcp",
+        prog="dbgview-mcp",
         description="MCP server for capturing Windows debug output (OutputDebugString)"
     )
     parser.add_argument(

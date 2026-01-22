@@ -1,5 +1,5 @@
 [project]
-name = "dbgcapture-mcp"
+name = "dbgview-mcp"
 dynamic = ["version"]
 description = "MCP server for capturing Windows debug output"
 readme = "README.md"
@@ -39,7 +39,7 @@ dev = [
 ]
 
 [project.scripts]
-dbgcapture-mcp = "dbgcapture_mcp:main"
+dbgview-mcp = "dbgcapture_mcp:main"
 
 [build-system]
 requires = ["hatchling"]
