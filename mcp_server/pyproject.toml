@@ -1,6 +1,6 @@
 [project]
 name = "dbgcapture-mcp"
-version = "0.1.0"
+dynamic = ["version"]
 description = "MCP server for capturing Windows debug output"
 readme = "README.md"
 license = "MIT"
@@ -44,6 +44,9 @@ dbgcapture-mcp = "dbgcapture_mcp:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "dbgcapture_mcp/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["dbgcapture_mcp"]

@@ -15,6 +15,7 @@ from mcp.server import Server
 from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
 
+from . import __version__
 from .capture_manager import get_manager
 
 
@@ -333,7 +334,7 @@ def main():
     parser.add_argument(
         "--version",
         action="version",
-        version="%(prog)s 0.1.0"
+        version=f"%(prog)s {__version__}"
     )
     parser.parse_args()
     
