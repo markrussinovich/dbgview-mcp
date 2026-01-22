@@ -28,6 +28,10 @@ jobs:
           cd dbgcapture
           nmake
       
+      - name: Copy exe to package directory
+        run: |
+          copy dbgcapture\dbgcapture.exe mcp_server\dbgcapture_mcp\dbgcapture.exe
+      
       - name: Install dependencies
         run: |
           cd mcp_server
