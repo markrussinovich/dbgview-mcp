@@ -50,7 +50,9 @@ path = "dbgcapture_mcp/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["dbgcapture_mcp"]
-artifacts = ["dbgcapture_mcp/dbgcapture.exe"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"dbgcapture_mcp/dbgcapture.exe" = "dbgcapture_mcp/dbgcapture.exe"
 
 [tool.hatch.build.targets.sdist]
 include = [

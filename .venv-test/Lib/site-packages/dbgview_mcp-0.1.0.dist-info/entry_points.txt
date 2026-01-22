@@ -1,0 +1,2 @@
+[console_scripts]
+dbgview-mcp = dbgcapture_mcp:main
